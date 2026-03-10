@@ -139,7 +139,6 @@ form textarea {
     background-color: #888;
 }
 
-/* ===== FOOTER ===== */
 footer {
     background: #222;
     color: white;
@@ -148,7 +147,6 @@ footer {
     margin-top: auto;
 }
 
-/* ===== LINK ACTIV ===== */
 nav a.active {
     color: #ccc;
     border-bottom: 2px solid #ccc;
@@ -200,3 +198,4 @@ nav a.active {
     }
 
 }
+
