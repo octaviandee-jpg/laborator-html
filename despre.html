@@ -2,8 +2,8 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>TechZone - Despre Noi</title>
-    <link rel="stylesheet" href="despre.css">
+    <title>TechZone - Contact</title>
+    <link rel="stylesheet" href="contact.css">
 </head>
 <body>
 
@@ -13,7 +13,7 @@
         <img src="logo.png" alt="TechZone Logo" width="80">
     </div>
 
-    <h1>Despre Noi</h1>
+    <h1>Contact</h1>
     <nav>
         <a href="index.html">Acasă</a>
         <a href="telefoane.html">Telefoane</a>
@@ -25,31 +25,34 @@
 </header>
 
 <main>
-    <section class="despre-container">
+    <section class="formular-container">
 
-        <h2>Cine suntem?</h2>
-        <p>
-            TechZone este un magazin online specializat în vânzarea de telefoane și laptopuri moderne.
-            Oferim produse de calitate la prețuri accesibile pentru toți clienții noștri.
-        </p>
+        <form onsubmit="return confirmareTrimitere()">
 
-        <h2>Date de contact</h2>
+            <label for="nume">Nume:</label>
+            <input type="text" id="nume" name="nume" required>
 
-        <p><strong>Telefon:</strong> +373 60000000</p>
-        <p><strong>Email:</strong> techzone@email.com</p>
+            <label for="prenume">Prenume:</label>
+            <input type="text" id="prenume" name="prenume" required>
 
-        <h2>Adresă</h2>
-        <p>
-            Strada Independenței 10<br>
-            Chișinău, Republica Moldova
-        </p>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
 
-        <h2>Program de lucru</h2>
-        <p>
-            Luni – Vineri: 09:00 – 21:00<br>
-            Sâmbătă: 10:00 – 17:00<br>
-            Duminică: Închis
-        </p>
+            <label for="telefon">Număr de telefon (opțional):</label>
+            <input type="tel" id="telefon" name="telefon"
+                   value="+373 "
+                   pattern="\+373\s?[0-9]{8}"
+                   placeholder="+373 6XXXXXXX">
+
+            <label for="mesaj">Mesaj:</label>
+            <textarea id="mesaj" name="mesaj" required></textarea>
+
+            <div class="butoane">
+                <button type="submit" class="trimite">Trimite</button>
+                <button type="reset" class="sterge">Șterge</button>
+            </div>
+
+        </form>
 
     </section>
 </main>
@@ -57,6 +60,12 @@
 <footer>
     <p>© 2026 TechZone</p>
 </footer>
+
+<script>
+function confirmareTrimitere() {
+    return confirm("Sigur doriți să trimiteți mesajul?");
+}
+</script>
 
 </body>
 </html>
