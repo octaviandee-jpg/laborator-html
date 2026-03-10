@@ -138,9 +138,9 @@ footer {
     }
 }
 
-/* ===== LINK ACTIV ===== */
 nav a.active {
     color: #ccc;  /* Gri deschis pentru link activ */
     border-bottom: 2px solid #ccc;
 
 }
+
