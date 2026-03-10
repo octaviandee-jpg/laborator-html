@@ -1,4 +1,3 @@
-/* ===== GENERAL ===== */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -8,7 +7,6 @@ body {
     flex-direction: column;
 }
 
-/* ===== HEADER ===== */
 header {
     display: flex;
     align-items: center;
@@ -48,7 +46,6 @@ nav a:hover {
     color: #ccc;  /* Gri deschis în loc de albastru */
 }
 
-/* ===== MAIN ===== */
 main {
     flex: 1;
     width: 80%;
@@ -63,7 +60,6 @@ section {
     justify-content: center;
 }
 
-/* ===== PRODUSE ===== */
 .produs {
     background: white;
     padding: 20px;
@@ -91,7 +87,6 @@ section {
     font-size: 18px;
 }
 
-/* ===== FOOTER ===== */
 footer {
     background: #222;
     color: white;
@@ -100,7 +95,6 @@ footer {
     margin-top: auto;
 }
 
-/* ===== RESPONSIVE ===== */
 @media screen and (max-width: 900px) {
     main {
         width: 90%;
@@ -148,4 +142,5 @@ footer {
 nav a.active {
     color: #ccc;  /* Gri deschis pentru link activ */
     border-bottom: 2px solid #ccc;
+
 }
