@@ -38,7 +38,6 @@ body{
     background-color: #0077cc;
 }
 
-/* Titlu centrat */
 .titlu-header {
     position: absolute;
     left: 50%;
@@ -48,7 +47,6 @@ body{
     font-size: 28px;
 }
 
-/* Meniu în dreapta */
 .meniu-header {
     display: flex;
     gap: 20px;
@@ -65,18 +63,15 @@ body{
     color: #00bfff;
 }
 
-/* ===== MAIN / SECTIUNI ===== */
 main section{
     width:80%;
     margin:30px auto;
 }
 
-/* TITLURI SECȚIUNI */
 section h2{
     color:#333;
 }
 
-/* ===== PRODUSE POPULARE ===== */
 .produse{
     display:flex;
     gap:20px;
@@ -102,7 +97,6 @@ section h2{
     font-weight:bold;
 }
 
-/* ===== FOOTER ===== */
 footer{
     background:#222;
     color:white;
@@ -111,7 +105,6 @@ footer{
     margin-top:40px;
 }
 
-/* ===== RESPONSIVE ===== */
 @media screen and (max-width: 900px) {
     .produs{
         width:45%;
@@ -144,4 +137,5 @@ footer{
     .produs{
         width: 100%;
     }
+
 }
