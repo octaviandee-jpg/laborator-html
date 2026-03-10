@@ -138,9 +138,9 @@ footer {
     }
 }
 
-/* ===== LINK ACTIV ===== */
 nav a.active {
     color: #00bfff;
     border-bottom: 2px solid #00bfff;
 
 }
+
