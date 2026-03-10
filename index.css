@@ -1,0 +1,147 @@
+body{
+    font-family: Arial, sans-serif;
+    margin:0;
+    background:#f4f4f4;
+}
+
+.header-principal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #222;
+    padding: 10px 40px;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* distanța între logo și buton */
+}
+
+.logo img {
+    height: 60px;
+}
+
+.buton-catalog {
+    padding: 10px 20px;
+    background-color: #00bfff;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.buton-catalog:hover {
+    background-color: #0077cc;
+}
+
+/* Titlu centrat */
+.titlu-header {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    margin: 0;
+    font-size: 28px;
+}
+
+/* Meniu în dreapta */
+.meniu-header {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.meniu-header a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.meniu-header a:hover {
+    color: #00bfff;
+}
+
+/* ===== MAIN / SECTIUNI ===== */
+main section{
+    width:80%;
+    margin:30px auto;
+}
+
+/* TITLURI SECȚIUNI */
+section h2{
+    color:#333;
+}
+
+/* ===== PRODUSE POPULARE ===== */
+.produse{
+    display:flex;
+    gap:20px;
+    margin-top:20px;
+    flex-wrap: wrap;
+}
+
+.produs{
+    background:white;
+    padding:20px;
+    border-radius:8px;
+    width:30%;
+    box-shadow:0 3px 8px rgba(0,0,0,0.1);
+    text-align:center;
+}
+
+.produs h3{
+    margin-top:0;
+    color:#0077cc;
+}
+
+.produs p{
+    font-weight:bold;
+}
+
+/* ===== FOOTER ===== */
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:15px;
+    margin-top:40px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media screen and (max-width: 900px) {
+    .produs{
+        width:45%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .header-principal {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .titlu-header {
+        position: static;
+        transform: none;
+        margin: 10px 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .header-left {
+        margin-bottom: 10px;
+    }
+
+    .produse{
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .produs{
+        width: 100%;
+    }
+}

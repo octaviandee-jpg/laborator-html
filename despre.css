@@ -1,0 +1,139 @@
+/* ===== GENERAL ===== */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f4f4f4;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===== HEADER ===== */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #222;
+    padding: 10px 40px;
+    flex-wrap: wrap;
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+}
+
+header h1 {
+    color: white;
+    margin: 0;
+    font-size: 28px;
+    text-align: center;
+    flex: 1;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ccc;
+}
+
+/* ===== MAIN ===== */
+main {
+    flex: 1;
+    width: 80%;
+    margin: 30px auto;
+}
+
+/* ===== DESPRE CONTAINER ===== */
+.despre-container {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.despre-container h2 {
+    color: #333;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    margin-top: 30px;
+}
+
+.despre-container h2:first-child {
+    margin-top: 0;
+}
+
+.despre-container p {
+    color: #444;
+    line-height: 1.6;
+    margin: 15px 0;
+}
+
+.despre-container strong {
+    color: #222;
+    font-weight: bold;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: auto;
+}
+
+/* ===== LINK ACTIV ===== */
+nav a.active {
+    color: #ccc;
+    border-bottom: 2px solid #ccc;
+}
+
+/* ===== RESPONSIVE ===== */
+@media screen and (max-width: 900px) {
+    main {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 20px;
+    }
+    
+    header h1 {
+        order: 2;
+        font-size: 24px;
+    }
+    
+    nav {
+        order: 3;
+        justify-content: center;
+    }
+    
+    .logo {
+        order: 1;
+    }
+    
+    .despre-container {
+        padding: 20px;
+    }
+    
+    .despre-container h2 {
+        font-size: 20px;
+    }
+}
