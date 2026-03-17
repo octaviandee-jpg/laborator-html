@@ -1,0 +1,177 @@
+/* ===== GENERAL ===== */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f4f4f4;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===== HEADER MODIFICAT PENTRU CENTRARE ===== */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #222;  /* Negru ca în original */
+    padding: 10px 40px;
+}
+
+/* MODIFICARE: Logo-ul ocupă 1/3 din spațiu (stânga) */
+.logo {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+}
+
+/* MODIFICARE: Titlul ocupă 1/3 din spațiu (centru) */
+header h1 {
+    color: white;
+    margin: 0;
+    font-size: 28px;
+    text-align: center;
+    flex: 1; 
+    white-space: nowrap;
+}
+
+/* MODIFICARE: Navigația ocupă 1/3 din spațiu (dreapta) */
+nav {
+    display: flex;
+    gap: 20px;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+nav a:hover {
+    color: #ccc;  /* Gri deschis */
+}
+
+/* ===== MAIN (NEMODIFICAT) ===== */
+main {
+    flex: 1;
+    width: 80%;
+    margin: 30px auto;
+}
+
+section {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* ===== PRODUSE (NEMODIFICAT) ===== */
+.produs {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 30%;
+    min-width: 250px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.produs:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.produs h3 {
+    margin-top: 0;
+    color: #333;
+    font-size: 20px;
+}
+
+.produs p {
+    font-weight: bold;
+    color: #222;
+    font-size: 18px;
+}
+
+/* ===== FOOTER (NEMODIFICAT) ===== */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: auto;
+}
+
+/* ===== RESPONSIVE ===== */
+@media screen and (max-width: 900px) {
+    main {
+        width: 90%;
+    }
+    
+    .produs {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* Ajustăm titlul să nu se înghesuie înainte de a trece pe modul mobil */
+    header h1 {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 20px;
+    }
+    
+    /* Resetăm flex-ul pentru mobil ca să se așeze frumos unul sub altul */
+    .logo, header h1, nav {
+        flex: none;
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    header h1 {
+        order: 2;
+        font-size: 24px;
+    }
+    
+    nav {
+        order: 3;
+        gap: 10px;
+    }
+    
+    .logo {
+        order: 1;
+    }
+    
+    section {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .produs {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+/* ===== LINK ACTIV ===== */
+nav a.active {
+    color: #ccc;
+    border-bottom: 2px solid #ccc;
+}

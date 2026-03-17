@@ -1,0 +1,109 @@
+/* Stiluri Generale */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: #222;
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Layout-ul pe două coloane */
+.container-produs {
+    display: flex;
+    max-width: 1000px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    gap: 40px;
+    align-items: flex-start; 
+}
+
+/* REZOLVARE FOTO MARE */
+.coloana-foto {
+    flex: 1;
+    max-width: 450px; /* Am mărit puțin pentru laptopuri deoarece sunt mai late */
+}
+
+.foto-principala {
+    width: 100%;      
+    height: auto;     
+    display: block;
+    border-radius: 8px;
+}
+
+.coloana-info {
+    flex: 1;
+}
+
+.nume-produs {
+    font-size: 32px;
+    margin-top: 0;
+}
+
+.pret-produs {
+    font-size: 26px;
+    color: #d32f2f;
+    font-weight: bold;
+}
+
+.box-specificatii {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin: 20px 0;
+}
+
+.box-specificatii ul {
+    list-style: none;
+    padding: 0;
+}
+
+.box-specificatii li {
+    padding: 5px 0;
+    border-bottom: 1px dotted #ccc;
+}
+
+.btn-cumpara {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.btn-cumpara:hover {
+    background: #218838;
+}
+
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 50px;
+}
+
+@media (max-width: 800px) {
+    .container-produs {
+        flex-direction: column;
+        align-items: center;
+    }
+    .coloana-foto {
+        max-width: 100%;
+    }
+}
