@@ -1,0 +1,222 @@
+/* ===== GENERAL ===== */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f4f4f4;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===== HEADER MODIFICAT PENTRU CENTRARE PERFECTĂ ===== */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #222;
+    padding: 10px 40px;
+}
+
+/* Zona de logo - stânga */
+.logo {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+}
+
+/* Titlul fix pe mijlocul ecranului */
+header h1 {
+    color: white;
+    margin: 0;
+    font-size: 28px;
+    text-align: center;
+    flex: 1; /* MODIFICARE: flex 1 pentru a fi egal cu celelalte coloane */
+    white-space: nowrap;
+}
+
+/* Navigația - dreapta */
+nav {
+    display: flex;
+    gap: 20px;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+nav a:hover {
+    color: #ccc;
+}
+
+/* ===== MAIN ===== */
+main {
+    flex: 1;
+    width: 80%;
+    margin: 30px auto;
+}
+
+/* ===== FORMULAR CONTAINER ===== */
+.formular-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+form label {
+    display: block;
+    margin-top: 15px;
+    color: #333;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+form label:first-of-type {
+    margin-top: 0;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: none;
+    border-color: #999;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* ===== BUTOANE ===== */
+.butoane {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.butoane button {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.trimite {
+    background-color: #222;
+    color: white;
+}
+
+.trimite:hover {
+    background-color: #444;
+}
+
+.sterge {
+    background-color: #666;
+    color: white;
+}
+
+.sterge:hover {
+    background-color: #888;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: auto;
+}
+
+/* ===== LINK ACTIV ===== */
+nav a.active {
+    color: #ccc;
+    border-bottom: 2px solid #ccc;
+}
+
+/* ===== RESPONSIVE ===== */
+@media screen and (max-width: 900px) {
+    main {
+        width: 90%;
+    }
+    
+    header h1 {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 20px;
+    }
+    
+    header h1 {
+        order: 2;
+        font-size: 24px;
+        flex: none;
+        width: 100%;
+        text-align: center;
+    }
+    
+    nav {
+        order: 3;
+        justify-content: center;
+        flex: none;
+        width: 100%;
+    }
+    
+    .logo {
+        order: 1;
+        flex: none;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    form {
+        padding: 20px;
+    }
+    
+    .butoane {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

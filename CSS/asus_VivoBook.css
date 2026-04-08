@@ -1,0 +1,193 @@
+/* ===== GENERAL ===== */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f4f4f4;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===== HEADER (Identic cu "cel bun" de la Telefoane) ===== */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #222;
+    padding: 10px 40px;
+    height: 80px;
+}
+
+.logo {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+}
+
+header h1 {
+    color: white;
+    margin: 0;
+    font-size: 28px;
+    text-align: center;
+    flex: 1;
+    white-space: nowrap;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+    flex: 1;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ff9900;
+}
+
+/* ===== COȘ CUMPĂRĂTURI ===== */
+.cos-wrapper {
+    position: relative;
+    margin-left: 10px;
+}
+
+#deschide-cos {
+    background: #ff9900;
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.1;
+    min-width: 45px;
+}
+
+#cos-dropdown {
+    position: absolute;
+    right: 0;
+    top: calc(100% + 15px);
+    background: white;
+    color: #222;
+    width: 260px;
+    border: 1px solid #ddd;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    padding: 15px;
+    border-radius: 8px;
+    z-index: 1000;
+}
+
+.cos-ascuns { display: none; }
+
+/* ===== CONTAINER PRODUS ===== */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 20px;
+}
+
+.container-produs {
+    display: flex;
+    max-width: 1000px;
+    width: 100%;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    gap: 40px;
+}
+
+.coloana-foto {
+    flex: 1;
+    max-width: 450px;
+}
+
+.foto-principala {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+.coloana-info {
+    flex: 1;
+}
+
+.nume-produs {
+    font-size: 32px;
+    margin-top: 0;
+}
+
+.pret-produs {
+    font-size: 26px;
+    color: #d32f2f;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.box-specificatii {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin: 20px 0;
+}
+
+.box-specificatii li {
+    padding: 8px 0;
+    border-bottom: 1px dotted #ccc;
+    font-size: 15px;
+    list-style: none;
+}
+
+.btn-cumpara {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.btn-cumpara:hover {
+    background: #218838;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: auto;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 800px) {
+    header { height: auto; flex-direction: column; padding: 20px; }
+    .logo, header h1, nav { flex: none; width: 100%; justify-content: center; }
+    header h1 { margin: 10px 0; }
+    .container-produs { flex-direction: column; align-items: center; }
+}
