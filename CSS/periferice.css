@@ -1,0 +1,209 @@
+/* ===== GENERAL ===== */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f4f4f4;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===== HEADER (Un singur rând & Aliniere optimizată) ===== */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #222;
+    padding: 0 25px;
+    height: 90px;
+    box-sizing: border-box;
+}
+
+/* Zona de logo */
+.logo {
+    flex: 0 0 90px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+/* Titlul centrat - ajustat să nu împingă meniul */
+header h1 {
+    color: white;
+    margin: 0;
+    font-size: 26px; 
+    text-align: center;
+    flex: 2; 
+    white-space: nowrap; /* Forțează textul pe un singur rând */
+    padding-left: 40px; /* Împinge titlul ușor spre dreapta pentru echilibru */
+}
+
+/* Navigația - dreapta */
+nav {
+    display: flex;
+    gap: 12px;
+    flex: 2; 
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.meniu-links {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    white-space: nowrap;
+    transition: 0.3s;
+}
+
+nav a:hover, nav a.active {
+    color: #ff9900;
+}
+
+/* ===== COȘ (MODEL VERTICAL - COMPACT) ===== */
+.cos-wrapper {
+    position: relative;
+    margin-left: 12px;
+}
+
+#deschide-cos {
+    background: #ff9900;
+    border: none;
+    color: white;
+    padding: 8px 10px; /* Dimensiune redusă pentru un aspect discret */
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    
+    /* Așezare pe verticală ca în poza 2 */
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    
+    line-height: 1;
+    min-width: 50px;
+    transition: background 0.3s;
+}
+
+#deschide-cos:hover {
+    background: #e68a00;
+}
+
+/* Iconița din buton */
+#deschide-cos i, #deschide-cos span:first-child {
+    font-size: 16px;
+}
+
+/* Numărul de sub iconiță */
+#numar-produse {
+    font-size: 14px;
+}
+
+/* Dropdown Coș - Reparat să plutească deasupra conținutului */
+#cos-dropdown {
+    position: absolute;
+    right: 0;
+    top: calc(100% + 10px);
+    background: white;
+    color: #222;
+    width: 280px;
+    border: 1px solid #ddd;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    padding: 15px;
+    border-radius: 8px;
+    z-index: 1000;
+    text-align: left;
+}
+
+.cos-ascuns { display: none; }
+
+/* ===== MAIN & GRID PRODUSE ===== */
+main {
+    flex: 1;
+    width: 85%;
+    margin: 40px auto;
+}
+
+.container-produse {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Card Produs */
+.produs {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 28%;
+    min-width: 270px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.produs:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.produs img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.produs h3 a {
+    text-decoration: none;
+    color: #0077cc;
+    font-size: 19px;
+}
+
+.pret {
+    font-weight: bold;
+    color: #222;
+    font-size: 20px;
+    margin: 15px 0;
+}
+
+.btn-adauga {
+    background: #222;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.btn-adauga:hover {
+    background: #ff9900;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+}
